@@ -1,0 +1,39 @@
+{
+  "name": "xhub",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "db:migrate": "prisma db push --skip-generate",
+    "db:generate": "prisma generate",
+    "db:studio": "prisma studio",
+    "db:seed": "node prisma/seed.js",
+    "db:reset": "prisma migrate reset --force",
+    "db:setup": "npm run db:migrate && npm run db:generate"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "@prisma/client": "^6.17.0",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@supabase/supabase-js": "^2.74.0",
+    "mysql2": "^3.15.1",
+    "next": "15.5.4",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.4",
+    "prisma": "^6.17.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

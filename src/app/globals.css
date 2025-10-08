@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  /* ===== Base ===== */
+  --x-bg: #f8f9fb;
+  --x-surface: #ffffff;
+  --x-border: rgba(0, 0, 0, 0.08);
+  --x-shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --x-radius: 10px;
+  --x-radius-tab: 8px;
+
+  /* ===== Text ===== */
+  --x-text: #1c1c1c;
+  --x-text-dim: #555555;
+
+  /* ===== accent ===== */
+  --x-accent: #00bcd4;                
+  --x-accent-alt: #ffb300;            
+  --x-primary: #0093ff;
+  --x-secondary: #ff9800;             
+  --x-success: #00c896;
+  --x-error: #e53935;
+
+  /* ===== Gradient ===== */
+  --x-gradient-accent: linear-gradient(90deg, #00bcd4 0%, #ffb300 100%);
+  --x-gradient-bg: linear-gradient(180deg, #ffffff 0%, #f8f9fb 100%);
+}
+
+/* ===== dark theme ===== */
+[data-theme="dark"] {
+  /* ===== Base ===== */
+  --x-bg: #0e0e11;
+  --x-surface: #151518;
+  --x-border: rgba(128, 128, 128, 0.25);
+  --x-shadow-soft: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --x-radius: 10px;
+  --x-radius-tab: 8px;
+
+  /* ===== Text ===== */
+  --x-text: #eaeaea;
+  --x-text-dim: #a8a8a8;
+
+  /* ===== Accent ===== */
+  --x-accent: rgb(0, 225, 255);       
+  --x-accent-alt: #ffb300;            
+  --x-primary: #00e1ff;
+  --x-secondary: #ff9800;             
+  --x-success: #00c896;
+  --x-error: #ff3d5a;
+
+  /* ===== Gradient ===== */
+  --x-gradient-accent: linear-gradient(90deg, #00e1ff 0%, #ffb300 100%);
+  --x-gradient-bg: linear-gradient(180deg, #0e0e11 0%, #151518 100%);
+}
+
+/* ===== System detection ===== */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    /* ===== Base theme */
+    --x-bg: #0e0e11;
+    --x-surface: #151518;
+    --x-border: rgba(128, 128, 128, 0.25);
+    --x-shadow-soft: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+    /* ===== text ===== */
+    --x-text: #eaeaea;
+    --x-text-dim: #a8a8a8;
+
+    /* ===== accent ===== */
+    --x-accent: rgb(0, 225, 255);
+    --x-accent-alt: #ffb300;
+    --x-primary: #00e1ff;
+    --x-secondary: #ff9800;
+    --x-success: #00c896;
+    --x-error: #ff3d5a;
+
+    /* ===== Gradient ===== */
+    --x-gradient-accent: linear-gradient(90deg, #00e1ff 0%, #ffb300 100%);
+    --x-gradient-bg: linear-gradient(180deg, #0e0e11 0%, #151518 100%);
+  }
+}
